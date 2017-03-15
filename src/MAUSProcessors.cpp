@@ -160,7 +160,11 @@ void DetectorsProcessor::init(std::string s) {
   klCellHits_.birth(s);
   ckovDigits_.birth(s);
   tracker_digits_.birth(s);
-  tracker_rec_.birth(s);
+  tracker_clus_rec_.birth(s);
+  tracker_sp_rec_.birth(s);
+  tracker_pat_rec_.birth(s);
+  tracker_prseed_.birth(s);
+  tracker_trackfit_.birth(s);
 }
 
 bool DetectorsProcessor::process() {
@@ -173,7 +177,11 @@ bool DetectorsProcessor::process() {
     klCellHits_.process(*output_);
     ckovDigits_.process(*output_);
     tracker_digits_.process(*output_);
-    tracker_rec_.process(*output_);
+    tracker_clus_rec_.process(*output_);
+    tracker_sp_rec_.process(*output_);
+    tracker_pat_rec_.process(*output_);
+    tracker_prseed_.process(*output_);
+    tracker_trackfit_.process(*output_);
   } catch(MAUS::Exceptions::Exception & lExc) {
     std::unique_lock<std::mutex> lck (mtx, std::defer_lock);
     lck.lock();
@@ -199,7 +207,11 @@ void DetectorsProcessor::close() {
   klCellHits_.death();
   ckovDigits_.death();
   tracker_digits_.death();
-  tracker_rec_.death();
+  tracker_clus_rec_.death();
+  tracker_sp_rec_.death();
+  tracker_pat_rec_.death();
+  tracker_prseed_.death();
+  tracker_trackfit_.death();
 }
 
 /////////////////////// EMRProcessor /////////////////////////////////////

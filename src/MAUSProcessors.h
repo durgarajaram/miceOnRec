@@ -39,7 +39,11 @@
 #include "src/map/MapCppKLCellHits/MapCppKLCellHits.hh"
 #include "src/map/MapCppCkovDigits/MapCppCkovDigits.hh"
 #include "src/map/MapCppTrackerDigits/MapCppTrackerDigits.hh"
-#include "src/map/MapCppTrackerRecon/MapCppTrackerRecon.hh"
+#include "src/map/MapCppTrackerClusterRecon/MapCppTrackerClusterRecon.hh"
+#include "src/map/MapCppTrackerSpacePointRecon/MapCppTrackerSpacePointRecon.hh"
+#include "src/map/MapCppTrackerPatternRecognition/MapCppTrackerPatternRecognition.hh"
+#include "src/map/MapCppTrackerPRSeed/MapCppTrackerPRSeed.hh"
+#include "src/map/MapCppTrackerTrackFit/MapCppTrackerTrackFit.hh"
 #include "src/reduce/ReduceCppTOFPlot/ReduceCppTOFPlot.hh"
 #include "src/reduce/ReduceCppEMRPlot/ReduceCppEMRPlot.hh"
 #include "src/reduce/ReduceCppKLPlot/ReduceCppKLPlot.hh"
@@ -111,7 +115,11 @@ class DetectorsProcessor : public MAUSDataProcessor {
   MAUS::MapCppCkovDigits     ckovDigits_;
   MAUS::MapCppTOFSpacePoints tofSpPoints_;
   MAUS::MapCppTrackerDigits  tracker_digits_;
-  MAUS::MapCppTrackerRecon   tracker_rec_;
+  MAUS::MapCppTrackerClusterRecon   tracker_clus_rec_;
+  MAUS::MapCppTrackerSpacePointRecon   tracker_sp_rec_;
+  MAUS::MapCppTrackerPatternRecognition   tracker_pat_rec_;
+  MAUS::MapCppTrackerPRSeed   tracker_prseed_;
+  MAUS::MapCppTrackerTrackFit   tracker_trackfit_;
 };
 
 class EMRProcessor : public MAUSDataProcessor {
