@@ -3,7 +3,7 @@ First of all make sure that MAUS is installed and the environment is loaded (sou
 To build the code do
 
   cd build
-  cmake ../src/
+  cmake ..
   make
 
 
@@ -20,7 +20,13 @@ or
 
 In order to start the Online reconstruction do:
 
-  nohup ./start_onrec.sh &>>start_onrec.log &
+  1) clone the MAUS ConfigurationDefaults by:
+      cd bin
+      python ./GetJsonConfig.py
+
+  2) nohup ./start_onrec.sh &>>start_onrec.log &
 
 
 The reconstructed output will show up in mic11/output.
+
+The reconstructed canvas images will go into $MAUS_WEB_MEDIA/reco

@@ -48,7 +48,11 @@ if (MAUS_LIBRARY_DIR)
                         MapCppTOFSlabHits
                         MapCppTOFSpacePoints
                         MapCppTrackerDigits
-                        MapCppTrackerRecon
+                        MapCppTrackerClusterRecon
+                        MapCppTrackerSpacePointRecon
+                        MapCppTrackerPatternRecognition
+                        MapCppTrackerPRSeed
+                        MapCppTrackerTrackFit
                         MapCppKLDigits
                         MapCppKLCellHits
                         MapCppCkovDigits
